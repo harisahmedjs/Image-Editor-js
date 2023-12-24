@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disable">
+      <h2 class="heading">Photo Editor By me</h2>
+      <div class="main">
+        <div class="panel">
+          <div class="filters">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button id="Brightness" class="active">Brightness</button>
+              <button id="Saturation">Saturation</button>
+              <button id="Inversion">Inversion</button>
+              <button id="Opacity">Opacity</button>
+              <button id="Contrast">Contrast</button>
+              <button id="Hue">Hue</button>
+              <button id="Sepia">Sepia</button>
+              <button id="Grayscale">Grayscale</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brightness</p>
+                <p class="value">100<span>%</span></p>
+              </div>
+              <input class="range" type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Rotate & Flip</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview" draggable="true">
+          <input
+            type="file"
+            class="file-input"
+            accept="image/*"
+            style="display: none"
+          />
+          <img
+            title="Insert An Image"
+            class="image-d"
+            src="./imgs/drag.webp"
+            height="600px"
+          />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset">Reset Changes</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="select">Select Image</button>
+          <!-- <input type="file" class="file-input" /> -->
+          <button class="download">Download Image</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
